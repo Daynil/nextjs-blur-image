@@ -2,18 +2,21 @@
   "name": "with-mdx-remote",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "npm run process-images && next",
     "dev:watch": "next-remote-watch ./posts",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "process-images": "node process-images.js"
   },
   "dependencies": {
+    "@types/sharp": "^0.26.1",
     "gray-matter": "^4.0.2",
     "next": "latest",
     "next-mdx-remote": "^1.0.0",
     "next-remote-watch": "0.2.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "sharp": "^0.26.3"
   },
   "license": "MIT"
 }
